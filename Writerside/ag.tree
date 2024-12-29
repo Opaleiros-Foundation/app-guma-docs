@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="ag"
+                 name="App Guma"
+                  start-page="Introdução.md">
+
+    <toc-element topic="Introdução.md"/>
+    <toc-element topic="BRD.md"/>
+    <toc-element topic="Desenvolvimento.md"/>
+    <toc-element topic="Engenharia-de-Software.md"/>
+    <toc-element topic="Mapa-do-SIte.md"/>
+    <toc-element topic="Tecnologias-Utilizadas.md"/>
+    <toc-element topic="Conclusão.md"/>
+    <toc-element topic="Referencias.md"/>
+</instance-profile>

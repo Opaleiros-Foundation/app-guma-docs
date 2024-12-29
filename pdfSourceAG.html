@@ -1,0 +1,243 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .bordered-element-rounded {
+            border: 1px solid #c4c4c4;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+        
+
+        .control {
+            color: #19191c;
+            font-size: 16px;
+            font-weight: 670;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .flex {
+            display: flex;
+        }
+        
+
+        .header-row {
+            background: #e6e6e6;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prompt {
+            flex-direction: row;
+            letter-spacing: .0015em;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+
+        .prompt-content {
+            padding: 15px;
+            overflow: hidden;
+            flex: 1 1 auto;
+        }
+        
+
+        .prompt-content-p p {
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prompt-icon {
+            flex: 0 0 auto;
+            margin-left: 15px;
+            margin-top: 15px;
+            fill: currentcolor;
+            width: 24px;
+            height: 24px;
+        }
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .no-bold {
+            font-weight: normal; 
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .table-wrapper {
+            overflow: hidden;
+            box-sizing: border-box;
+            font: inherit;
+        }
+        
+
+        .tip {
+            background-color: rgba(25, 25, 28, .05);
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style><title>pdfSourceAG</title></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Sumario</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-1039436266">Introdu&ccedil;&atilde;o</a></div><div class="page">2</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#66036">BRD</a></div><div class="page">3</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-184503770">Desenvolvimento</a></div><div class="page">4</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#74600496">Engenharia de Software</a></div><div class="page">5</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#1974794273">Manual do Usu&aacute;rio</a></div><div class="page">7</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#1116840661">Conclus&atilde;o</a></div><div class="page">8</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#1651661729">Referencias</a></div><div class="page">9</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-1039436266">Introdu&ccedil;&atilde;o</h1><p id="-1039436266#-xzuxpi_3">O <span class="control" id="-1039436266#-xzuxpi_6">aplicativo Guma</span> &eacute; um sistema voltado para analisar a compatibilidade das tarefas com as rubricas disponibilizadas no canvas, de forma que consiga orientar o aluno a otimizar a entrega da sua atividade. Essa funcionalidade permite que os estudantes tenham mais clareza sobre os crit&eacute;rios de avalia&ccedil;&atilde;o e possam ajustar suas entregas de acordo com as expectativas dos professores.</p><p id="-1039436266#-xzuxpi_4">O <span class="control" id="-1039436266#-xzuxpi_7">sistema Guma</span> oferece aos alunos uma plataforma integrada, onde eles podem visualizar as rubricas definidas para cada atividade, compreender os requisitos de cada crit&eacute;rio e receber insights sobre como aprimorar suas entregas. Essa abordagem visa auxiliar os estudantes a alcan&ccedil;arem melhores resultados em suas atividades acad&ecirc;micas.</p><section><h2 id="-1039436266#objetivo-do-relat-rio" data-toc="objetivo-do-relat-rio#Introdução.md-objetivo-do-relat-rio">Objetivo do Relat&oacute;rio:</h2><p id="-1039436266#-xzuxpi_8">O objetivo deste relat&oacute;rio &eacute; documentar a cria&ccedil;&atilde;o, o desenvolvimento e o funcionamento do <span class="control" id="-1039436266#-xzuxpi_9">aplicativo Guma</span>, que visa otimizar a entrega de atividades acad&ecirc;micas por meio da an&aacute;lise de compatibilidade entre as tarefas e as rubricas disponibilizadas no canvas. O relat&oacute;rio abranger&aacute; as etapas de concep&ccedil;&atilde;o, implementa&ccedil;&atilde;o, modelagem e a aplicabilidade do sistema no ambiente de estudos.</p></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="66036">BRD</h1><section><h2 id="66036#brd" data-toc="brd#BRD.md-brd">BRD</h2><p id="66036#-u0u796_11">A business requirements document (BRD) &eacute; um relat&oacute;rio detalhado que descreve tudo o que um novo projeto requer para obter sucesso. Este documento delineia os objetivos do projeto, o que &eacute; esperado ao longo do ciclo de vida do projeto e o que &eacute; necess&aacute;rio para alcan&ccedil;ar o projeto.</p></section><section><h2 id="66036#resumo-executivo" data-toc="resumo-executivo#BRD.md-resumo-executivo">Resumo Executivo</h2></section><section><h2 id="66036#objetivo-do-projeto" data-toc="objetivo-do-projeto#BRD.md-objetivo-do-projeto">Objetivo do projeto</h2></section><section><h2 id="66036#escopo-do-projeto" data-toc="escopo-do-projeto#BRD.md-escopo-do-projeto">Escopo do projeto</h2></section><section><h2 id="66036#requerimento-de-neg-cios" data-toc="requerimento-de-neg-cios#BRD.md-requerimento-de-neg-cios">Requerimento de neg&oacute;cios</h2><div class="table-wrapper detached"><table id="66036#-u0u796_12"><tr class="header-row" id="66036#-u0u796_13"><th id="66036#-u0u796_14"><p>Requisito de Neg&oacute;cio</p></th><th id="66036#-u0u796_15"><p>Prioridade</p></th><th id="66036#-u0u796_16"><p>N&iacute;vel Cr&iacute;tico</p></th></tr></table></div></section><section><h2 id="66036#key-stakeholders" data-toc="key-stakeholders#BRD.md-key-stakeholders">Key Stakeholders</h2><div class="table-wrapper detached"><table id="66036#-u0u796_17"><tr class="header-row" id="66036#-u0u796_18"><th id="66036#-u0u796_19"><p>Nome</p></th><th id="66036#-u0u796_20"><p>Ocupa&ccedil;&atilde;o</p></th></tr></table></div></section><section><h2 id="66036#restri-es-de-projeto" data-toc="restri-es-de-projeto#BRD.md-restri-es-de-projeto">Restri&ccedil;&otilde;es de Projeto</h2><div class="table-wrapper detached"><table id="66036#-u0u796_21"><tr class="header-row" id="66036#-u0u796_22"><th id="66036#-u0u796_23"><p>Restri&ccedil;&atilde;o</p></th><th id="66036#-u0u796_24"><p>Descri&ccedil;&atilde;o</p></th></tr></table></div></section><section><h2 id="66036#custo-benef-cio" data-toc="custo-benef-cio#BRD.md-custo-benef-cio">Custo Benef&iacute;cio</h2><div class="table-wrapper detached"><table id="66036#-u0u796_25"><tr class="header-row" id="66036#-u0u796_26"><th id="66036#-u0u796_27"><p>Benef&iacute;cio</p></th><th id="66036#-u0u796_28"><p>Descri&ccedil;&atilde;o</p></th></tr></table></div></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-184503770">Desenvolvimento</h1><section><h2 id="-184503770#projeto" data-toc="projeto#Desenvolvimento.md-projeto">Projeto</h2><section><h3 id="-184503770#objetivo-geral" data-toc="objetivo-geral#Desenvolvimento.md-objetivo-geral">Objetivo Geral</h3></section><section><h3 id="-184503770#objetivos-espec-ficos" data-toc="objetivos-espec-ficos#Desenvolvimento.md-objetivos-espec-ficos">Objetivos Espec&iacute;ficos</h3></section></section><section><h2 id="-184503770#mercado" data-toc="mercado#Desenvolvimento.md-mercado">Mercado</h2><section><h3 id="-184503770#an-lise-de-mercado" data-toc="an-lise-de-mercado#Desenvolvimento.md-an-lise-de-mercado">An&aacute;lise de Mercado</h3><section><h4 id="-184503770#p-blico-alvo" data-toc="p-blico-alvo#Desenvolvimento.md-p-blico-alvo">P&uacute;blico Alvo</h4><p id="-184503770#pp38ic_13">O aplicativo tem como p&uacute;blico-alvo...</p><div class="table-wrapper detached"><table id="-184503770#pp38ic_14"><tr class="header-row" id="-184503770#pp38ic_15"><th id="-184503770#pp38ic_16"><p>Perfil</p></th><th id="-184503770#pp38ic_17"><p>Descri&ccedil;&atilde;o</p></th></tr></table></div></section><section><h4 id="-184503770#an-lise-da-concorr-ncia" data-toc="an-lise-da-concorr-ncia#Desenvolvimento.md-an-lise-da-concorr-ncia">An&aacute;lise da Concorr&ecirc;ncia</h4></section><section><h4 id="-184503770#tend-ncias" data-toc="tend-ncias#Desenvolvimento.md-tend-ncias">Tend&ecirc;ncias:</h4></section></section><section><h3 id="-184503770#oportunidades" data-toc="oportunidades#Desenvolvimento.md-oportunidades">Oportunidades:</h3></section><section><h3 id="-184503770#posicionamento-e-diferencial-competitivo" data-toc="posicionamento-e-diferencial-competitivo#Desenvolvimento.md-posicionamento-e-diferencial-competitivo">Posicionamento e Diferencial Competitivo</h3></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="74600496">Engenharia de Software</h1><section><h2 id="74600496#requisitos" data-toc="requisitos#Engenharia-de-Software.md-requisitos">Requisitos</h2><section><h3 id="74600496#requisitos-funcionais" data-toc="requisitos-funcionais#Engenharia-de-Software.md-requisitos-funcionais">Requisitos Funcionais</h3><div class="table-wrapper detached"><table id="74600496#-zgeeps_8"><tr class="header-row" id="74600496#-zgeeps_9"><th id="74600496#-zgeeps_11"><p>Requisito</p></th><th id="74600496#-zgeeps_12"><p>Descri&ccedil;&atilde;o</p></th><th id="74600496#-zgeeps_13"><p>Prioridade</p></th><th id="74600496#-zgeeps_14"><p>Caso de Uso</p></th></tr><tr class="" id="74600496#-zgeeps_10"><td id="74600496#-zgeeps_15"></td><td id="74600496#-zgeeps_16"></td><td id="74600496#-zgeeps_17"></td><td id="74600496#-zgeeps_18"></td></tr></table></div></section><section><h3 id="74600496#requisitos-n-o-funcionais" data-toc="requisitos-n-o-funcionais#Engenharia-de-Software.md-requisitos-n-o-funcionais">Requisitos N&atilde;o Funcionais</h3><div class="table-wrapper detached"><table id="74600496#-zgeeps_19"><tr class="header-row" id="74600496#-zgeeps_21"><th id="74600496#-zgeeps_23"><p>Requisito</p></th><th id="74600496#-zgeeps_24"><p>Descri&ccedil;&atilde;o</p></th><th id="74600496#-zgeeps_25"><p>Prioridade</p></th><th id="74600496#-zgeeps_26"><p>Caso de Uso</p></th></tr><tr class="" id="74600496#-zgeeps_22"><td id="74600496#-zgeeps_27"></td><td id="74600496#-zgeeps_28"></td><td id="74600496#-zgeeps_29"></td><td id="74600496#-zgeeps_30"></td></tr></table></div><p id="74600496#-zgeeps_20"></p></section></section><section><h2 id="74600496#arquitetura-de-informa-o" data-toc="arquitetura-de-informa-o#Engenharia-de-Software.md-arquitetura-de-informa-o">Arquitetura de Informa&ccedil;&atilde;o</h2><p id="74600496#-zgeeps_33">A arquitetura de informa&ccedil;&atilde;o (AI) para a documenta&ccedil;&atilde;o de software do nosso projeto deve ser orientada a fornecer uma estrutura clara e intuitiva para organizar e disseminar o conhecimento t&eacute;cnico. Segundo Rosenfeld e Morville (2015), a AI &quot;envolve a concep&ccedil;&atilde;o da estrutura e da navega&ccedil;&atilde;o de um espa&ccedil;o de informa&ccedil;&atilde;o para facilitar a execu&ccedil;&atilde;o de tarefas e o acesso ao conte&uacute;do&quot;.</p><p id="74600496#-zgeeps_34">Essa estrutura de arquitetura de informa&ccedil;&atilde;o ajudar&aacute; a garantir que a documenta&ccedil;&atilde;o do nosso projeto de software seja compreens&iacute;vel, acess&iacute;vel e eficaz para os desenvolvedores e outras partes interessadas.</p><p id="74600496#-zgeeps_35"></p><section><h3 id="74600496#wireframe" data-toc="wireframe#Engenharia-de-Software.md-wireframe">Wireframe</h3><blockquote class="prompt flex bordered-element-rounded tip detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p id="74600496#-zgeeps_42">Link para o Figma do projeto: https://www.figma.com/design/keAudUZHHInEkyf2bfl5ef/Flash-Pomo?node-id=0-1&amp;t=EVf3oq7Mg9h7qvvg-1</p></div>
+</blockquote>
+<p id="74600496#-zgeeps_41"></p></section><section><h3 id="74600496#banco-de-dados" data-toc="banco-de-dados#Engenharia-de-Software.md-banco-de-dados">Banco de Dados</h3><p id="74600496#-zgeeps_45"></p></section></section><section><h2 id="74600496#uml" data-toc="uml#Engenharia-de-Software.md-uml">UML</h2><section><h3 id="74600496#casos-de-uso" data-toc="casos-de-uso#Engenharia-de-Software.md-casos-de-uso">Casos de Uso</h3><section><h4 id="74600496#uc00-exemplo" data-toc="uc00-exemplo#Engenharia-de-Software.md-uc00-exemplo">UC00 - Exemplo</h4><div class="table-wrapper detached"><table id="74600496#-zgeeps_51"><tr class="header-row" id="74600496#-zgeeps_54"><th id="74600496#-zgeeps_62"><p><span class="control" id="74600496#-zgeeps_64">Nome</span></p></th><th id="74600496#-zgeeps_63"></th></tr><tr class="" id="74600496#-zgeeps_55"><td id="74600496#-zgeeps_65"><p><span class="control" id="74600496#-zgeeps_67">Descri&ccedil;&atilde;o</span></p></td><td id="74600496#-zgeeps_66"></td></tr><tr class="" id="74600496#-zgeeps_56"><td id="74600496#-zgeeps_68"><p><span class="control" id="74600496#-zgeeps_70">Fluxo de cria&ccedil;&atilde;o</span></p></td><td id="74600496#-zgeeps_69"></td></tr><tr class="" id="74600496#-zgeeps_57"><td id="74600496#-zgeeps_71"><p><span class="control" id="74600496#-zgeeps_73">Fluxo de edi&ccedil;&atilde;o</span></p></td><td id="74600496#-zgeeps_72"></td></tr><tr class="" id="74600496#-zgeeps_58"><td id="74600496#-zgeeps_74"><p><span class="control" id="74600496#-zgeeps_76">Ator</span></p></td><td id="74600496#-zgeeps_75"></td></tr><tr class="" id="74600496#-zgeeps_59"><td id="74600496#-zgeeps_77"><p><span class="control" id="74600496#-zgeeps_79">Pr&eacute;-condi&ccedil;&otilde;es</span></p></td><td id="74600496#-zgeeps_78"></td></tr><tr class="" id="74600496#-zgeeps_60"><td id="74600496#-zgeeps_80"><p><span class="control" id="74600496#-zgeeps_82">P&oacute;s-condi&ccedil;&otilde;es</span></p></td><td id="74600496#-zgeeps_81"></td></tr><tr class="" id="74600496#-zgeeps_61"><td id="74600496#-zgeeps_83"><p><span class="control" id="74600496#-zgeeps_85">Fluxo de Exce&ccedil;&atilde;o</span></p></td><td id="74600496#-zgeeps_84"></td></tr></table></div></section></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="1974794273">Manual do Usu&aacute;rio</h1><p id="1974794273#tybh9r_3">O manual do usu&aacute;rio tem como objetivo orientar o usu&aacute;rio final do sistema a utiliz&aacute;-lo de forma adequada e eficiente, contendo informa&ccedil;&otilde;es sobre as funcionalidades, recursos, instru&ccedil;&otilde;es de uso, solu&ccedil;&atilde;o de problemas e demais informa&ccedil;&otilde;es relevantes ao usu&aacute;rio.</p></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="1116840661">Conclus&atilde;o</h1><p id="1116840661#-n8ywe3_3">Start typing here...</p></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="1651661729">Referencias</h1></article></div></section></div></body></html>
