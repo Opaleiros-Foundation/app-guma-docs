@@ -50,10 +50,17 @@ compreensível, acessível e eficaz para os desenvolvedores e outras partes inte
 
 *Ainda a ser detalhado.*
 
-<br/>
-<br/>
-
 ## UML
+```mermaid
+classDiagram
+    class LessonReviews {
+        +uuid: string
+        +subject: string
+        +professor: string
+        +feedback: string
+        +response_date: date
+    }
+```
 
 ### Casos de Uso
 
