@@ -154,4 +154,7 @@ classDiagram
 | **Pré-condições**    | A interface deve estar implementada conforme os padrões de usabilidade.                  |
 | **Pós-condições**    | O aluno realiza suas ações de forma eficiente e sem dificuldades.                        |
 
-<br/>
+
+## Diagrama de sequência
+
+![](sequence_diagram.svg)
