@@ -157,4 +157,4 @@ classDiagram
 
 ## Diagrama de sequência
 
-![](sequence_diagram.svg)
+![](https://github.com/user-attachments/assets/57be409a-b107-4196-8585-d7a167fe8005)
