@@ -48,7 +48,7 @@ compreensível, acessível e eficaz para os desenvolvedores e outras partes inte
 
 ### Banco de Dados
 
-*Ainda a ser detalhado.*
+![image.png](image.png)
 
 ## UML
 ```mermaid
@@ -157,4 +157,74 @@ classDiagram
 
 ## Diagrama de sequência
 
-![](https://github.com/user-attachments/assets/57be409a-b107-4196-8585-d7a167fe8005)
+> Buscar todas as matérias que o aluno está matriculado
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant G as Server
+    participant A as Canvas API
+    
+    C->>+G: get all subjects with student token
+    G->>+A: Forward request
+
+    A-->>-G: all student subjects
+    G-->>-C: All student subjects reponse
+    Note right of A: It's necessary to have the canvas token
+```
+
+> Buscar todas as ativades de uma matéria
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant G as Server
+    participant A as Canvas API
+    
+    C->>+G: get all assignments from a course with student token
+    G->>+A: Forward request
+
+    A-->>-G: all student assignments
+    G-->>-C: All student assignments reponse
+    Note right of A: It's necessary to have the canvas token
+```
+
+> Buscar todas as rubricas de uma ativade de uma máteria
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant G as Server
+    participant A as Canvas API
+    
+    C->>+G: get all rubric from a assignment from a course with student token
+    G->>+A: Forward request
+
+    A-->>-G: all student rubric
+    G-->>-C: All student rubric reponse
+    Note right of A: It's necessary to have the canvas token
+```
+
+> Avaliar atividades
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant G as Server
+    participant A as Canvas API
+    participant I as AI
+    participant D as Database
+    
+    C->>+G: 1.1 initial request with assignments
+    G->>+A: 1.2 Query with assignments and rubrics
+
+    A-->>-G: 1.3 Return feedback
+    G->>+I: 2.1 Provide all rubrics to the AI
+    I-->>-G: 2.2 Return feedback from assignemnt
+    
+    G->>+D: 3.1 Save feedback
+    D-->>-G: 3.2 return Feedback
+    G-->>-C: 3.4 Provide feedback
+    Note right of A: It's necessary to have the canvas token
+```
+

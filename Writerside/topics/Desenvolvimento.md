@@ -20,15 +20,13 @@ O objetivo geral deste projeto é desenvolver um sistema que auxilie os alunos d
 #### Público Alvo
 O aplicativo tem como público-alvo...
 
-| Perfil | Descrição |
-| --- | --- |
+| Perfil | Descrição                      |
+|-----------------------------------------|
+| Alunos da jala university | Alunos do curso de engenharia de software comercial que precisam melhorar a sua nota |
 
 #### Análise da Concorrência
+Produtos sem contextos sobre o tipo de atividade passado na universidade
 
 #### Tendências:
-
-
-### Oportunidades:
-
-### Posicionamento e Diferencial Competitivo
+Aumentar o número de dados de treinamento para ter respostas mais precisas
 

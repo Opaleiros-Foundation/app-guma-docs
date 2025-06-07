@@ -4,14 +4,17 @@
 
 <instance-profile id="ag"
                  name="App Guma"
-                  start-page="Introdução.md">
+                  start-page="Introducao.md">
 
-    <toc-element topic="Introdução.md"/>
-    <toc-element topic="BRD.md"/>
-    <toc-element topic="Desenvolvimento.md"/>
-    <toc-element topic="Engenharia-de-Software.md"/>
-    <toc-element topic="Mapa-do-SIte.md"/>
-    <toc-element topic="Tecnologias-Utilizadas.md"/>
+    <toc-element topic="Introducao.md"/>
+    <toc-element topic="Como-rodar-o-projeto.md"/>
+    <toc-element topic="Software-analysis.md">
+        <toc-element topic="BRD.md"/>
+        <toc-element topic="Desenvolvimento.md"/>
+        <toc-element topic="Engenharia-de-Software.md"/>
+        <toc-element topic="Mapa-do-SIte.md"/>
+        <toc-element topic="Tecnologias-Utilizadas.md"/>
+    </toc-element>
     <toc-element topic="Conclusão.md"/>
     <toc-element topic="Referencias.md"/>
 </instance-profile>

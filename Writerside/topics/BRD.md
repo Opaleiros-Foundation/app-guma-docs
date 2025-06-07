@@ -15,6 +15,8 @@ compativel a atividade está com o que é esperado dela.
 
 ## Requerimento de negócios
 
+> Mvp 1.0
+
 | Requisito de Negócio                 | Prioridade | Nível Crítico |
 |--------------------------------------|------------|---------------|
 | Seleção de rubrica e outros contexto | 1          | critico       |
