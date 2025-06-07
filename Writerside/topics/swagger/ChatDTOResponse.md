@@ -1,3 +1,3 @@
 #  ChatDTOResponse
 
-<api-schema openapi-path="../../../api/swagger.json" name="ChatDTOResponse"/>
+<api-schema openapi-path="../../../api/swagger.yml" name="ChatDTOResponse"/>

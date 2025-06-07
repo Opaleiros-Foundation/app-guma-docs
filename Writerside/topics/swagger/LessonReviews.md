@@ -1,3 +1,3 @@
 #  LessonReviews
 
-<api-schema openapi-path="../../../api/swagger.json" name="LessonReviews"/>
+<api-schema openapi-path="../../../api/swagger.yml" name="LessonReviews"/>

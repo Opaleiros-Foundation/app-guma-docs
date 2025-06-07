@@ -1,3 +1,3 @@
 #  Assignment
 
-<api-schema openapi-path="../../../api/swagger.json" name="Assignment"/>
+<api-schema openapi-path="../../../api/swagger.yml" name="Assignment"/>

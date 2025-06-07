@@ -1,3 +1,3 @@
 #  Rating
 
-<api-schema openapi-path="../../../api/swagger.json" name="Rating"/>
+<api-schema openapi-path="../../../api/swagger.yml" name="Rating"/>
