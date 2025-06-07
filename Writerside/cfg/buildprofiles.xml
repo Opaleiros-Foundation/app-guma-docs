@@ -3,11 +3,28 @@
 <buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <variables></variables>
+    <variables>
+        <noindex-content>false</noindex-content>
+        <primary-color>halloween</primary-color>
+        <link-color>dracula</link-color>
+    </variables>
     <build-profile instance="ag">
         <variables>
             <noindex-content>true</noindex-content>
+            <header-logo>logo.png</header-logo>
+            <custom-favicons>logo.png</custom-favicons>
+            <download-title>Venha conhecer o GUMA</download-title>
+            <download-page>https://github.com/Opaleiros-Foundation/Guma</download-page>
+            <showDownloadButton>true</showDownloadButton>
+            <og-image>logo_complete.png</og-image>
         </variables>
     </build-profile>
-
+    <footer>
+        <copyright>2025 Opaleiros Corp.</copyright>
+        <notice>Opala Ltda.</notice>
+        <social type="github"
+                href="https://github.com/Opaleiros-Foundation"/>
+        <social type="gitlab" href="https://gitlab.com/opaleiros-foundation"/>
+        <social type="twitter" href="https://x.com/MrPunkSama">Opala CEO</social>
+    </footer>
 </buildprofiles>
