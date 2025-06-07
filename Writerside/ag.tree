@@ -8,6 +8,19 @@
 
     <toc-element topic="Introducao.md"/>
     <toc-element topic="Como-rodar-o-projeto.md"/>
+    <toc-element topic="API_Reference.md">
+        <toc-element topic="Schemas.md">
+            <toc-element topic="Link.md"/>
+            <toc-element topic="Assignment.md"/>
+            <toc-element topic="Enrollment.md"/>
+            <toc-element topic="Course.md"/>
+            <toc-element topic="LessonReviews.md"/>
+            <toc-element topic="ChatDTOResponse.md"/>
+            <toc-element topic="Rubric.md"/>
+            <toc-element topic="Rating.md"/>
+            <toc-element topic="ChatDTO.md"/>
+        </toc-element>
+    </toc-element>
     <toc-element topic="Software-analysis.md">
         <toc-element topic="BRD.md"/>
         <toc-element topic="Desenvolvimento.md"/>
