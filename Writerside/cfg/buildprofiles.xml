@@ -23,8 +23,8 @@
         <copyright>2025 Opaleiros Corp.</copyright>
         <notice>Opala Ltda.</notice>
         <social type="github"
-                href="https://github.com/Opaleiros-Foundation">Opaleiros</social>
-        <social type="gitlab" href="https://gitlab.com/opaleiros-foundation">opaleiros</social>
-        <social type="twitter" href="https://x.com/MrPunkSama">CEO Opaleiro</social>
+                href="https://github.com/Opaleiros-Foundation"/>
+        <social type="gitlab" href="https://gitlab.com/opaleiros-foundation"/>
+        <social type="twitter" href="https://x.com/MrPunkSama"/>
     </footer>
 </buildprofiles>
