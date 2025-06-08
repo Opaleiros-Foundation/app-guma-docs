@@ -10,4 +10,8 @@
         <description>Created after removal of "About App Guma" from App Guma</description>
         <accepts>starter-topic.html</accepts>
     </rule>
+    <rule id="7a1e4d1a">
+        <description>Created after removal of "Guia de contribuição" from App Guma</description>
+        <accepts>Guia-de-contribuição.html</accepts>
+    </rule>
 </rules>
