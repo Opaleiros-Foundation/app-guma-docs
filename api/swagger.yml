@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.0.0
 info:
   title: GUMA API
   description: API for reviewing assignments
@@ -12,7 +12,7 @@ info:
     url: https://opensource.org/license/mit/
   version: '1.0'
 servers:
-  - url: http://localhost:8080
+  - url: http://localhost:8080/api/v1/guma
     description: Generated server url
 tags:
   - name: Canvas
@@ -238,48 +238,10 @@ components:
           type: string
           description: Assignment content
           example: make a database with java
-        heading:
-          type: array
-          description: The heading of the assignment
-          example: Do A great database
-          items:
-            $ref: '#/components/schemas/Rubric'
       required:
         - content
         - professor
         - subject
-    Rating:
-      type: object
-      properties:
-        id:
-          type: string
-        points:
-          type: number
-          format: double
-        description:
-          type: string
-        long_description:
-          type: string
-    Rubric:
-      type: object
-      properties:
-        id:
-          type: string
-        points:
-          type: integer
-          format: int32
-        description:
-          type: string
-        ratings:
-          type: array
-          items:
-            $ref: '#/components/schemas/Rating'
-        long_description:
-          type: object
-        ignore_for_scoring:
-          type: object
-        criterion_use_range:
-          type: boolean
     ChatDTOResponse:
       type: object
       properties:
@@ -403,6 +365,38 @@ components:
           type: boolean
         submissions_download_url:
           type: string
+    Rating:
+      type: object
+      properties:
+        id:
+          type: string
+        points:
+          type: number
+          format: double
+        description:
+          type: string
+        long_description:
+          type: string
+    Rubric:
+      type: object
+      properties:
+        id:
+          type: string
+        points:
+          type: integer
+          format: int32
+        description:
+          type: string
+        ratings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Rating'
+        long_description:
+          type: object
+        ignore_for_scoring:
+          type: object
+        criterion_use_range:
+          type: boolean
     Link:
       type: object
       properties:
